@@ -13,7 +13,6 @@ export const useGetRestaurant = (restaurantId?: string) => {
     if (!response.ok) {
       throw new Error("Failed to get restaurant");
     }
-
     return response.json();
   };
 
