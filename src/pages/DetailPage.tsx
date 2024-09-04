@@ -4,9 +4,10 @@ import { AspectRatio } from "@radix-ui/react-aspect-ratio";
 import RestaurantInfo from "../components/RestaurantInfo";
 import MenuItem from "../components/MenuItem";
 import { useState } from "react";
-import { Card } from "../components/ui/card";
+import { Card, CardFooter } from "../components/ui/card";
 import OrderSummary from "../components/OrderSummary";
 import { MenuItem as MenuItemType } from "../types";
+import CheckoutButton from "../components/CheckoutButton";
 
 export type CartItem = {
     _id: string;
@@ -104,6 +105,9 @@ return (
               cartItems={cartItems}
               removeFromCart={removeFromCart}
             />
+            <CardFooter>
+              <CheckoutButton />
+            </CardFooter>
           </Card>
         </div>
     </div>
